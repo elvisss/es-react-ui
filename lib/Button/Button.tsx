@@ -1,5 +1,9 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 
-export const Button = ({ children }) => {
-  return <button>{children}</button>
+interface IButtonProps {
+  children: ReactNode
+}
+
+export const Button = ({ children }: IButtonProps) => {
+  return <button>Click: {children}</button>
 }

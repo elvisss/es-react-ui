@@ -1,9 +1,9 @@
-import { Button } from '../lib/main'
+import { Button } from 'es-react-ui'
 
 function App() {
   return (
     <>
-      <Button>Click</Button>
+      <Button>Here</Button>
     </>
   )
 }
