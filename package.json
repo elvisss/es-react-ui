@@ -3,8 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/es-react-ui.umd.cjs",
+  "module": "./dist/es-react-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/es-react-ui.js",
+      "require": "./dist/es-react-ui.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
+    "prebuild": "rm -rf dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
