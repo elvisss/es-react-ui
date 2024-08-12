@@ -5,5 +5,5 @@ interface IButtonProps {
 }
 
 export const Button = ({ children }: IButtonProps) => {
-  return <button>Click: {children}</button>
+  return <button className='bg-red-800'>Click: {children}</button>
 }
