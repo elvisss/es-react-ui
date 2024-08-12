@@ -2,9 +2,17 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    dts({
+      tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
+      rollupTypes: true,
+    }),
+  ],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
