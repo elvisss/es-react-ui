@@ -3,10 +3,11 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 interface IDialogFooter {
   className: string
+  children: React.ReactNode
 }
 
-const DialogFooter = ({ className, ...props }: IDialogFooter) => (
-  <div className={`modal-footer ${className ? className : ''}`} {...props} />
+const DialogFooter = ({ className, children, ...props }: IDialogFooter) => (
+  <div className={`modal-footer ${className ? className : ''}`} {...props}>{children}</div>
 )
 DialogFooter.displayName = 'DialogFooter'
 
