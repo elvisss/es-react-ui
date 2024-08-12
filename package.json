@@ -1,7 +1,6 @@
 {
   "name": "es-react-ui",
-  "private": true,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist"
@@ -19,7 +18,8 @@
     "prebuild": "rm -rf dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "react": "^18.3.1",
